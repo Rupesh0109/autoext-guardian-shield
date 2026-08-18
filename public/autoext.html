@@ -464,7 +464,7 @@ var track=document.querySelector('.scroll-track'),
     current=0;
 function setState(i){
   if(i===current)return;current=i;
-  car.className.baseVal='state-'+(i+1);
+  car.setAttribute('class','state-'+(i+1));
   steps.forEach(function(s,k){s.classList.toggle('active',k===i)});
   dots.forEach(function(d,k){d.classList.toggle('on',k===i)});
 }
